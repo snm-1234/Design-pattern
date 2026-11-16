@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Parking Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <h2>🚗 SmartPark</h2>
+
+        <nav>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#slots">Find Parking</a>
+            <a href="#reservations">My Bookings</a>
+            <a href="#vehicles">My Vehicles</a>
+            <a href="#history">History</a>
+        </nav>
+
+        <div class="profile">
+            <span>Welcome, Driver</span>
+            <button>Logout</button>
+        </div>
+    </header>
+
+    <!-- Dashboard -->
+    <section id="dashboard" class="container">
+        <h1>Customer Dashboard</h1>
+        <p>Manage your parking reservations easily.</p>
+
+        <div class="stats">
+
+            <div class="stat-card">
+                <h3>Available Slots</h3>
+                <h2>45</h2>
+            </div>
+
+            <div class="stat-card">
+                <h3>My Reservations</h3>
+                <h2>3</h2>
+            </div>
+
+            <div class="stat-card">
+                <h3>Active Parking</h3>
+                <h2>1</h2>
+            </div>
+
+            <div class="stat-card">
+                <h3>Total Vehicles</h3>
+                <h2>2</h2>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Search Parking Slots -->
+    <section id="slots" class="container">
+        <h2>Find Parking Slots</h2>
+
+        <div class="search-box">
+            <input type="text" placeholder="Enter parking location">
+
+            <select>
+                <option value="">Select Vehicle Type</option>
+                <option>Car</option>
+                <option>Bike</option>
+                <option>SUV</option>
+                <option>Truck</option>
+            </select>
+
+            <button>Search Slots</button>
+        </div>
+
+        <div class="slot-container">
+
+            <div class="slot-card">
+                <h3>Slot A01</h3>
+                <p>Location: Ground Floor</p>
+                <p>Type: Car</p>
+                <p class="available">Available</p>
+                <h3>₹30 / Hour</h3>
+                <button>Book Now</button>
+            </div>
+
+            <div class="slot-card">
+                <h3>Slot A02</h3>
+                <p>Location: Ground Floor</p>
+                <p>Type: SUV</p>
+                <p class="occupied">Occupied</p>
+                <h3>₹40 / Hour</h3>
+                <button disabled>Unavailable</button>
+            </div>
+
+            <div class="slot-card">
+                <h3>Slot B01</h3>
+                <p>Location: First Floor</p>
+                <p>Type: Bike</p>
+                <p class="available">Available</p>
+                <h3>₹15 / Hour</h3>
+                <button>Book Now</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- My Reservations -->
+    <section id="reservations" class="container">
+        <h2>My Reservations</h2>
+
+        <table>
+            <tr>
+                <th>Booking ID</th>
+                <th>Slot</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+
+            <tr>
+                <td>BK101</td>
+                <td>A01</td>
+                <td>16-11-2026</td>
+                <td>10 AM - 12 PM</td>
+                <td class="confirmed">Confirmed</td>
+                <td><button class="cancel">Cancel</button></td>
+            </tr>
+
+            <tr>
+                <td>BK102</td>
+                <td>B01</td>
+                <td>17-11-2026</td>
+                <td>2 PM - 4 PM</td>
+                <td class="pending">Pending</td>
+                <td><button class="cancel">Cancel</button></td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- My Vehicles -->
+    <section id="vehicles" class="container">
+        <h2>My Vehicles</h2>
+
+        <div class="vehicle-container">
+
+            <div class="vehicle-card">
+                <h3>🚗 Hyundai i20</h3>
+                <p>Registration: KA01AB1234</p>
+                <p>Type: Car</p>
+                <button>Edit Details</button>
+            </div>
+
+            <div class="vehicle-card">
+                <h3>🏍 Honda Activa</h3>
+                <p>Registration: KA02CD5678</p>
+                <p>Type: Bike</p>
+                <button>Edit Details</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Parking History -->
+    <section id="history" class="container">
+        <h2>Parking History</h2>
+
+        <table>
+            <tr>
+                <th>Session ID</th>
+                <th>Vehicle</th>
+                <th>Entry Time</th>
+                <th>Exit Time</th>
+                <th>Amount</th>
+                <th>Payment</th>
+            </tr>
+
+            <tr>
+                <td>PS101</td>
+                <td>Hyundai i20</td>
+                <td>9:00 AM</td>
+                <td>11:00 AM</td>
+                <td>₹60</td>
+                <td class="confirmed">Paid</td>
+            </tr>
+
+            <tr>
+                <td>PS102</td>
+                <td>Honda Activa</td>
+                <td>2:00 PM</td>
+                <td>4:00 PM</td>
+                <td>₹30</td>
+                <td class="confirmed">Paid</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Notifications -->
+    <section class="container">
+        <h2>Notifications 🔔</h2>
+
+        <div class="notification">
+            Your parking reservation BK101 has been confirmed.
+        </div>
+
+        <div class="notification">
+            Payment of ₹60 completed successfully.
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 SmartPark | Smart Parking Management System</p>
+    </footer>
+
+</body>
+</html>
